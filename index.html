@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manuel Navarrete Cifuentes — Supply Chain Senior</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f5f3; display: flex; justify-content: center; padding: 2rem 1rem; min-height: 100vh; }
+  .cv { max-width: 720px; width: 100%; background: #ffffff; border-radius: 16px; padding: 3rem 3rem; box-shadow: 0 2px 24px rgba(0,0,0,0.08); }
+  .header { margin-bottom: 2rem; border-bottom: 1px solid #e5e5e3; padding-bottom: 1.5rem; }
+  .name { font-size: 30px; font-weight: 600; color: #1a1a18; letter-spacing: -0.5px; }
+  .title { font-size: 15px; color: #185fa5; font-weight: 500; margin-top: 5px; }
+  .contact { display: flex; flex-wrap: wrap; gap: 10px 20px; margin-top: 12px; }
+  .contact a, .contact span { font-size: 13px; color: #5f5e5a; text-decoration: none; display: flex; align-items: center; gap: 5px; }
+  .contact a:hover { color: #185fa5; }
+  .summary { font-size: 14px; color: #5f5e5a; line-height: 1.75; margin-bottom: 2rem; padding: 1rem 1.25rem; background: #f5f5f3; border-radius: 10px; border-left: 3px solid #185fa5; }
+  .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 1.5rem; }
+  .metric { background: #f5f5f3; border-radius: 8px; padding: 14px 16px; }
+  .metric-num { font-size: 24px; font-weight: 600; color: #1a1a18; }
+  .metric-label { font-size: 11px; color: #888780; margin-top: 3px; line-height: 1.4; }
+  .chart-block { margin-bottom: 2rem; background: #f5f5f3; border-radius: 12px; padding: 1.25rem 1.5rem; }
+  .chart-title { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #888780; margin-bottom: 1rem; }
+  .chart-area { position: relative; height: 90px; }
+  .chart-labels { display: flex; justify-content: space-between; margin-top: 8px; }
+  .chart-label { font-size: 10px; color: #888780; text-align: center; flex: 1; line-height: 1.3; }
+  .chart-label span { display: block; font-size: 9px; opacity: 0.7; }
+  .section-title { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #888780; margin-bottom: 1rem; }
+  .timeline { position: relative; margin-bottom: 2rem; }
+  .timeline::before { content: ''; position: absolute; left: 7px; top: 6px; bottom: 6px; width: 1px; background: #d3d1c7; }
+  .job { display: flex; gap: 20px; margin-bottom: 1.5rem; position: relative; }
+  .dot { width: 15px; height: 15px; border-radius: 50%; background: #fff; border: 2px solid #185fa5; flex-shrink: 0; margin-top: 3px; z-index: 1; }
+  .dot.current { background: #185fa5; }
+  .job-body { flex: 1; }
+  .job-company { font-size: 13px; font-weight: 500; color: #185fa5; }
+  .job-role { font-size: 14px; font-weight: 500; color: #1a1a18; margin-top: 1px; }
+  .job-period { font-size: 12px; color: #888780; margin-top: 2px; margin-bottom: 8px; }
+  .job-bullets { list-style: none; }
+  .job-bullets li { font-size: 13px; color: #5f5e5a; line-height: 1.6; padding: 2px 0 2px 14px; position: relative; }
+  .job-bullets li::before { content: '—'; position: absolute; left: 0; color: #888780; }
+  .highlight { color: #1a1a18; font-weight: 500; }
+  .achievement { border-top: 1px solid #e5e5e3; margin-top: 10px; padding-top: 8px; font-size: 13px; color: #5f5e5a; line-height: 1.6; font-style: italic; }
+  .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 2rem; }
+  .skill-group { background: #f5f5f3; border-radius: 8px; padding: 12px 14px; }
+  .skill-group-title { font-size: 11px; font-weight: 500; color: #888780; margin-bottom: 6px; }
+  .skill-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+  .tag { font-size: 11px; color: #5f5e5a; background: #fff; border: 1px solid #e5e5e3; border-radius: 4px; padding: 3px 7px; }
+  .langs { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 2rem; }
+  .lang { font-size: 13px; color: #5f5e5a; display: flex; align-items: center; gap: 6px; }
+  .lang-level { font-size: 11px; color: #888780; background: #f5f5f3; padding: 2px 7px; border-radius: 4px; }
+  .footer-note { font-size: 12px; color: #888780; text-align: center; padding-top: 1.5rem; border-top: 1px solid #e5e5e3; }
+  @media (max-width: 600px) {
+    .cv { padding: 1.5rem 1.25rem; }
+    .metrics { grid-template-columns: 1fr; }
+    .skills-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="cv">
+
+  <div class="header">
+    <div class="name">Manuel Navarrete Cifuentes</div>
+    <div class="title">Director de Logística · Supply Chain Senior</div>
+    <div class="contact">
+      <span>📍 Castellón / Valencia</span>
+      <a href="tel:+34646663735">📞 646 66 37 35</a>
+      <a href="mailto:manuel.navarrete.cifuentes@gmail.com">✉️ manuel.navarrete.cifuentes@gmail.com</a>
+      <a href="https://linkedin.com" target="_blank">🔗 LinkedIn</a>
+    </div>
+  </div>
+
+  <div class="summary">
+    Más de 20 años resolviendo operaciones complejas de supply chain en entornos industriales de alta exigencia. Especializado en planificación operativa y en el equilibrio entre nivel de servicio, stock y eficiencia. Visión end-to-end, orientación a resultados y capacidad demostrada para liderar equipos amplios, controlar presupuestos operativos y tomar decisiones clave junto a Dirección.
+  </div>
+
+  <div class="metrics">
+    <div class="metric">
+      <div class="metric-num">+20</div>
+      <div class="metric-label">años en supply chain industrial</div>
+    </div>
+    <div class="metric">
+      <div class="metric-num">95%+</div>
+      <div class="metric-label">nivel de servicio sostenido en +100 países</div>
+    </div>
+    <div class="metric">
+      <div class="metric-num">−60%</div>
+      <div class="metric-label">reducción de valor de inventario</div>
+    </div>
+  </div>
+
+  <div class="chart-block">
+    <div class="chart-title">Evolución de responsabilidad — 25 años</div>
+    <div class="chart-area">
+      <svg width="100%" height="90" viewBox="0 0 600 90" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="grad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#185fa5" stop-opacity="0.15"/>
+            <stop offset="100%" stop-color="#185fa5" stop-opacity="0.02"/>
+          </linearGradient>
+        </defs>
+        <polygon points="0,85 0,22 150,33 270,44 390,27 600,11 600,85" fill="url(#grad)"/>
+        <polyline points="0,22 150,33 270,44 390,27 600,11" fill="none" stroke="#185fa5" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+        <circle cx="0" cy="22" r="4" fill="#185fa5"/>
+        <circle cx="150" cy="33" r="4" fill="#185fa5"/>
+        <circle cx="270" cy="44" r="4" fill="#185fa5"/>
+        <circle cx="390" cy="27" r="4" fill="#185fa5"/>
+        <circle cx="600" cy="11" r="5" fill="#185fa5"/>
+      </svg>
+    </div>
+    <div class="chart-labels">
+      <div class="chart-label">Roig Cerámica<span>2001–2014</span></div>
+      <div class="chart-label">Colorobbia<span>2014–2016</span></div>
+      <div class="chart-label">Trans-Grau<span>2016–2018</span></div>
+      <div class="chart-label">Andromeda<span>2018–2021</span></div>
+      <div class="chart-label">Avramar<span>2021–hoy</span></div>
+    </div>
+  </div>
+
+  <div class="section-title">Trayectoria profesional</div>
+  <div class="timeline">
+
+    <div class="job">
+      <div class="dot current"></div>
+      <div class="job-body">
+        <div class="job-company">Avramar S.A. — Grupo líder agroalimentario</div>
+        <div class="job-role">Director de Logística / Responsable de Logística Final y Servicio al Cliente</div>
+        <div class="job-period">Mayo 2021 – Actualidad</div>
+        <ul class="job-bullets">
+          <li>Liderazgo de la logística final y del servicio al cliente con foco en <span class="highlight">fiabilidad y visibilidad operativa</span></li>
+          <li>Coordinación de operaciones nacionales e internacionales con equipos multidisciplinares</li>
+          <li><span class="highlight">Gestión del presupuesto operativo de logística final</span> del grupo: planificación, seguimiento y control de costes variables en un entorno de alta exposición</li>
+          <li>Análisis de KPIs y apoyo directo a decisiones de Dirección sobre servicio, costes y organización</li>
+        </ul>
+        <div class="achievement">Mantenimiento del coste €/kg durante cinco años consecutivos (2021–2026) en un entorno marcado por inflación, conflictos geopolíticos y cambios normativos en el sector del transporte</div>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="dot"></div>
+      <div class="job-body">
+        <div class="job-company">Andromeda Group – Avramar S.A.</div>
+        <div class="job-role">Responsable de Logística</div>
+        <div class="job-period">Junio 2018 – Mayo 2021</div>
+        <ul class="job-bullets">
+          <li>Planificación y coordinación de transporte <span class="highlight">marítimo y terrestre</span> entre criaderos, granjas y clientes</li>
+          <li>Gestión de almacenes en un entorno crítico donde los tiempos son determinantes</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="dot"></div>
+      <div class="job-body">
+        <div class="job-company">Trans-Grau S.L.</div>
+        <div class="job-role">Planificador de Tráfico y Operaciones</div>
+        <div class="job-period">Octubre 2016 – Junio 2018</div>
+        <ul class="job-bullets">
+          <li>Planificación diaria de rutas y coordinación logística transfronteriza</li>
+          <li>Control de tiempos, incidencias y disponibilidad de flota</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="dot"></div>
+      <div class="job-body">
+        <div class="job-company">Colorobbia España</div>
+        <div class="job-role">Responsable de Planificación de la Producción</div>
+        <div class="job-period">Octubre 2014 – Octubre 2016</div>
+        <ul class="job-bullets">
+          <li>Planificación y secuenciación de producción en función de pedidos, capacidad y restricciones de planta</li>
+          <li>Seguimiento de KPIs de planificación, servicio y eficiencia productiva</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="dot"></div>
+      <div class="job-body">
+        <div class="job-company">Roig Cerámica S.A.</div>
+        <div class="job-role">Responsable de Logística y Planificación</div>
+        <div class="job-period">Marzo 2001 – Octubre 2014</div>
+        <ul class="job-bullets">
+          <li>Gestión integral de logística, planificación y stocks con un equipo de <span class="highlight">33 personas</span></li>
+          <li><span class="highlight">Reducción del valor de inventario en más del 60%</span> manteniendo ventas en más de 100 países</li>
+          <li>Nivel de servicio superior al 95% de forma sostenida. Diseño e implantación del sistema de ubicaciones y rotaciones</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section-title">Competencias</div>
+  <div class="skills-grid">
+    <div class="skill-group">
+      <div class="skill-group-title">Operaciones y estrategia</div>
+      <div class="skill-tags">
+        <span class="tag">Supply chain end-to-end</span>
+        <span class="tag">Planificación operativa</span>
+        <span class="tag">Optimización servicio/stock/coste</span>
+        <span class="tag">Control presupuestario</span>
+        <span class="tag">Aprovisionamiento</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-title">Herramientas y sistemas</div>
+      <div class="skill-tags">
+        <span class="tag">SAP R3</span>
+        <span class="tag">BAAN</span>
+        <span class="tag">AS400</span>
+        <span class="tag">Excel avanzado</span>
+        <span class="tag">Power BI</span>
+        <span class="tag">Gestión por KPIs</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title">Idiomas</div>
+  <div class="langs">
+    <div class="lang">Español <span class="lang-level">nativo</span></div>
+    <div class="lang">Catalán <span class="lang-level">nativo</span></div>
+    <div class="lang">Inglés <span class="lang-level">profesional</span></div>
+    <div class="lang">Francés <span class="lang-level">básico</span></div>
+  </div>
+
+  <div class="footer-note">Manuel Navarrete Cifuentes · 2026</div>
+
+</div>
+</body>
+</html>
